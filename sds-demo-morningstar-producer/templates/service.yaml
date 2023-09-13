@@ -1,0 +1,19 @@
+{{- if eq (toString .Values.management.enabled) "true" }}
+apiVersion: v1
+kind: Service
+metadata:
+  name: morningstar-producer
+  namespace: {{.Release.Name}}
+  annotations:
+    sds/load-ports-as-separate-services: "true"
+  labels:
+    app: morningstar-producer
+spec:
+  selector:
+    app: morningstar-producer
+  ports:
+    - name: management
+      port: {{ .Values.management.port }}
+      targetPort: 8000
+  type: LoadBalancer
+{{- end }}
