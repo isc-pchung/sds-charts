@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: connectors-jvm
+  name: morningstar-consumer
   namespace: {{.Release.Name}}
   labels:
-    app: connectors-jvm
+    app: morningstar-consumer
 
 
 spec:
   replicas: {{.Values.replicaCount}}
   selector:
     matchLabels:
-      app: connectors-jvm
+      app: morningstar-consumer
   template:
     metadata:
       labels:
-        app: connectors-jvm
+        app: morningstar-consumer
     spec:
       # imagePullSecrets:
       #   - name: intersystems-container-registry-secret

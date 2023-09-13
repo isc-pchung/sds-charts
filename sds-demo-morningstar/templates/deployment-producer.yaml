@@ -1,10 +1,10 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: connectors-jvm
+  name: morningstar-producer
   namespace: {{.Release.Name}}
   labels:
-    app: connectors-jvm
+    app: morningstar-producer
 
 
 spec:
@@ -25,7 +25,6 @@ spec:
         {{- end }}
       containers:
         - name: morningstar-producer
-          # image: containers.intersystems.com/iscinternal/sds-service/sds-connectors-jvm:0.1.0
           image: {{ .Values.image.registry }}/{{ .Values.image.repository }}:{{ .Chart.AppVersion }}
           imagePullPolicy: {{.Values.image.pullPolicy}}
           resources:

@@ -2,15 +2,15 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: connectors-jvm
+  name: morningstar-producer
   namespace: {{.Release.Name}}
   annotations:
     sds/load-ports-as-separate-services: "true"
   labels:
-    app: connectors-jvm
+    app: morningstar-producer
 spec:
   selector:
-    app: connectors-jvm
+    app: morningstar-producer
   ports:
     - name: management
       port: {{ .Values.management.port }}
