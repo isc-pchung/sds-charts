@@ -1,0 +1,22 @@
+{{- if eq (toString .Values.management.enabled) "true" }}
+apiVersion: v1
+kind: Service
+metadata:
+  name: connectors-jvm
+  namespace: {{.Release.Name}}
+  annotations:
+    sds/load-ports-as-separate-services: "true"
+  labels:
+    app: connectors-jvm
+spec:
+  selector:
+    app: connectors-jvm
+  ports:
+    - name: management
+      port: {{ .Values.management.port }}
+      targetPort: 8000
+    - name: quickfix
+      port: {{ .Values.quickfix.port }}
+      targetPort: 3001
+  type: LoadBalancer
+{{- end }}
