@@ -23,6 +23,6 @@ version: 0.1.0
 # It is recommended to use it with quotes.
 appVersion: "0.1.0"
 annotations:
-  intersystems/sds-title: SDS Demo Morningstar
+  intersystems/sds-title: SDS Demo Morningstar Producer
   intersystems/sds-organization: InterSystems Corporation
   intersystems/sds-category: custom
