@@ -24,14 +24,14 @@ spec:
         - name: {{ .Values.requiredSecrets.intersystemsContainerRegistrySecret }}
         {{- end }}
       env:
-        - name: CLOUD_PROVIDER
-          value: {{ .Values.cloudProvider }}
-        - name: CLOUD_PROVIDER_REGION
-          value: {{ .Values.cloudProviderRegion }}
-        - name: SERVICE_INTERNAL_NAME
-          value: {{ .Values.serviceInternalName }}
-        - name: KAFKA_BROKER
-          value: {{ .Values.kafkaBroker }}
+      - name: CLOUD_PROVIDER
+        value: {{ .Values.cloudProvider }}
+      - name: CLOUD_PROVIDER_REGION
+        value: {{ .Values.cloudProviderRegion }}
+      - name: SERVICE_INTERNAL_NAME
+        value: {{ .Values.serviceInternalName }}
+      - name: KAFKA_BROKER
+        value: {{ .Values.kafkaBroker }}
       containers:
         - name: morningstar-producer
           image: {{ .Values.image.registry }}/{{ .Values.image.producer.repository }}:{{ .Chart.AppVersion }}
