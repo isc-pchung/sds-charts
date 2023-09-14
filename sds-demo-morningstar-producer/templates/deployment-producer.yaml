@@ -34,15 +34,15 @@ spec:
           # ports:
           #   - name: management
           #     containerPort: 8000
-        env:
-        - name: CLOUD_PROVIDER
-          value: {{ .Values.cloudProvider }}
-        - name: CLOUD_PROVIDER_REGION
-          value: {{ .Values.cloudProviderRegion }}
-        - name: SERVICE_INTERNAL_NAME
-          value: {{ .Values.serviceInternalName }}
-        - name: KAFKA_BROKER
-          value: {{ .Values.kafkaBroker }}
+          env:
+            - name: CLOUD_PROVIDER
+              value: {{ .Values.cloudProvider }}
+            - name: CLOUD_PROVIDER_REGION
+              value: {{ .Values.cloudProviderRegion }}
+            - name: SERVICE_INTERNAL_NAME
+              value: {{ .Values.serviceInternalName }}
+            - name: KAFKA_BROKER
+              value: {{ .Values.kafkaBroker }}
       {{- if .Values.compute.database.nodeTypeSelector }}
       nodeSelector:
         sds/node-type: {{ .Values.compute.database.nodeTypeSelector }}
