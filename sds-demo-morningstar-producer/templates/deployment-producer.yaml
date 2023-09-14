@@ -40,9 +40,9 @@ spec:
             requests:
               cpu: {{ .Values.compute.database.cpu }}
               memory: {{ .Values.compute.database.memory }}
-          ports:
-            - name: management
-              containerPort: 8000
+          # ports:
+          #   - name: management
+          #     containerPort: 8000
       {{- if .Values.compute.database.nodeTypeSelector }}
       nodeSelector:
         sds/node-type: {{ .Values.compute.database.nodeTypeSelector }}
