@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: morningstar-producer
+  name: morningstar-consumer
   namespace: {{.Release.Name}}
   labels:
-    app: morningstar-producer
+    app: morningstar-consumer
 
 
 spec:
   replicas: {{.Values.replicaCount}}
   selector:
     matchLabels:
-      app: morningstar-producer
+      app: morningstar-consumer
   template:
     metadata:
       labels:
-        app: morningstar-producer
+        app: morningstar-consumer
     spec:
       # imagePullSecrets:
       #   - name: intersystems-container-registry-secret
@@ -24,8 +24,8 @@ spec:
         - name: {{ .Values.requiredSecrets.intersystemsContainerRegistrySecret }}
         {{- end }}
       containers:
-        - name: morningstar-producer
-          image: {{ .Values.image.registry }}/{{ .Values.image.producer.repository }}:{{ .Chart.AppVersion }}
+        - name: morningstar-consumer
+          image: {{ .Values.image.registry }}/{{ .Values.image.consumer.repository }}:{{ .Chart.AppVersion }}
           imagePullPolicy: {{.Values.image.pullPolicy}}
           resources:
             requests:
