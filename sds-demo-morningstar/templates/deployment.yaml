@@ -25,7 +25,7 @@ spec:
         {{- end }}
       containers:
         - name: morningstar-producer
-          image: {{ .Values.image.registry }}/{{ .Values.image.producer.repository }}:{{ .Chart.AppVersion }}
+          image: {{ .Values.image.registry }}/{{ .Values.image.repository }}:{{ .Chart.AppVersion }}
           imagePullPolicy: {{.Values.image.pullPolicy}}
           resources:
             requests:
