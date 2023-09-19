@@ -1,10 +1,10 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: morningstar-producer
+  name: morningstar
   namespace: {{.Release.Name}}
   labels:
-    app: morningstar-producer
+    app: morningstar
 
 
 spec:
@@ -15,7 +15,7 @@ spec:
   template:
     metadata:
       labels:
-        app: morningstar-producer
+        app: morningstar
     spec:
       # imagePullSecrets:
       #   - name: intersystems-container-registry-secret

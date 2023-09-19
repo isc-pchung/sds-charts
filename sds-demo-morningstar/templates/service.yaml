@@ -2,18 +2,18 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: morningstar-producer
+  name: morningstar
   namespace: {{.Release.Name}}
   annotations:
     sds/load-ports-as-separate-services: "true"
   labels:
-    app: morningstar-producer
+    app: morningstar
 spec:
   selector:
-    app: morningstar-producer
+    app: morningstar
   ports:
     - name: management
       port: {{ .Values.management.port }}
-      targetPort: 8000
+      targetPort: 8081
   type: LoadBalancer
 {{- end }}
