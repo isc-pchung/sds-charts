@@ -7,12 +7,12 @@ entries:
       intersystems/sds-title: SDS Demo Morningstar
     apiVersion: v2
     appVersion: 0.1.0
-    created: "2023-09-19T19:07:58.331902-04:00"
+    created: "2023-09-19T20:14:25.412307-04:00"
     description: A Helm chart for Kubernetes
-    digest: b90b9e88a33aa4b3d6bb71ab45dd711e80f031d1a600a810984d6bb69c7f4a4b
+    digest: 72c2c1599d966e38df7b44334ec8a701a53f2f5e44318fd625cae6f5d797f7b8
     name: sds-demo-morningstar
     type: application
     urls:
     - https://isc-pchung.github.io/sds-charts/sds-demo-morningstar-0.1.0.tgz
     version: 0.1.0
-generated: "2023-09-19T19:07:58.330286-04:00"
+generated: "2023-09-19T20:14:25.410859-04:00"
