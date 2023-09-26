@@ -10,7 +10,8 @@ spec:
     name: iris-cpf-config-map
   topology:
     data:
-      containers:
+      podTemplate:
+        containers:
         - name: morningstar-consumer
           image: {{ .Values.image.consumer.registry }}/{{ .Values.image.consumer.repository }}:/{{ .Values.image.tag }}
           imagePullPolicy: {{.Values.image.pullPolicy}}
@@ -27,7 +28,6 @@ spec:
               value: {{ .Values.serviceInternalName }}
             - name: KAFKA_BROKER
               value: {{ .Values.kafkaBroker }}
-      podTemplate:
         metadata:
           annotations:
             pre.hook.backup.velero.io/command: '["/bin/bash", "/home/irisowner/sds-freeze.sh"]'
