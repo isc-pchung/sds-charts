@@ -17,6 +17,16 @@ secrets:
   reason: These are the credentials to authenticate with containers.intersystems.com
 EULSA: https://www.intersystems.com/EULSA-Docs/InterSystems_IRIS_Cloud_End_User-8_14_19.pdf 
 endpoints:
+- title: Swagger
+  group: Developer
+  description: Open the Swagger documentation page for API
+  type: browsing
+  url: http://{externalService.host}:{externalService.port}/swagger-ui.html
+  contexts: 
+  - manage
+  visibility: external
+  presentation: link
+  externalService: management
 - title: Web Terminal
   group: Developer
   description: Open an instance of terminal in your browser
