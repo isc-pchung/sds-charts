@@ -280,7 +280,6 @@ externalServicesDeclarations:
    label: Management Portal over Load Balancer
    description: Port to access the management portal over a Load Balancer
 
-
 endpointDependencies:
   - dependency: trade-datasource
     endpointType: kafka

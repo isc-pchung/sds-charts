@@ -26,9 +26,9 @@ mirrored: false
 image:
   registry: containers.intersystems.com/iscinternal/sds
   repository: isc-iris-db
-  consumer:
-    registry: containers.intersystems.com/iscinternal/sds-demo
-    repository: morningstar-consumer
+  # consumer:
+  #   registry: containers.intersystems.com/iscinternal/sds-demo
+  #   repository: morningstar-consumer
 
 superServer:
   enabled: true
