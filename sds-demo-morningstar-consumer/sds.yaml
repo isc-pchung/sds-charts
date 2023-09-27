@@ -290,7 +290,12 @@ externalServicesDeclarations:
    label: Management Portal over Load Balancer
    description: Port to access the management portal over a Load Balancer
 
-
+endpointDependencies:
+  - dependency: trade-datasource
+    endpointType: kafka
+    reason: This application needs to pull trades and price updates from kafka topics
+    chartField: kafkaBroker
+    optional: false
 
 
 # apiVersion: v1
