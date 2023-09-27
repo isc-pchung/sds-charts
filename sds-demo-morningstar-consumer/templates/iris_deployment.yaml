@@ -10,23 +10,23 @@ spec:
     name: iris-cpf-config-map
   topology:
     data:
-      # containers:
-      #   - name: morningstar-consumer
-      #     image: {{ .Values.image.consumer.registry }}/{{ .Values.image.consumer.repository }}:/{{ .Values.image.tag }}
-      #     imagePullPolicy: {{.Values.image.pullPolicy}}
-      #     resources:
-      #       requests:
-      #         cpu: {{ .Values.compute.database.cpu }}
-      #         memory: {{ .Values.compute.database.memory }}
-      #     env:
-      #       - name: CLOUD_PROVIDER
-      #         value: {{ .Values.cloudProvider }}
-      #       - name: CLOUD_PROVIDER_REGION
-      #         value: {{ .Values.cloudProviderRegion }}
-      #       - name: SERVICE_INTERNAL_NAME
-      #         value: {{ .Values.serviceInternalName }}
-      #       - name: KAFKA_BROKER
-      #         value: {{ .Values.kafkaBroker }}    
+      containers:
+        - name: morningstar-consumer
+          image: {{ .Values.image.consumer.registry }}/{{ .Values.image.consumer.repository }}:/{{ .Values.image.tag }}
+          imagePullPolicy: {{.Values.image.pullPolicy}}
+          resources:
+            requests:
+              cpu: {{ .Values.compute.database.cpu }}
+              memory: {{ .Values.compute.database.memory }}
+          env:
+            - name: CLOUD_PROVIDER
+              value: {{ .Values.cloudProvider }}
+            - name: CLOUD_PROVIDER_REGION
+              value: {{ .Values.cloudProviderRegion }}
+            - name: SERVICE_INTERNAL_NAME
+              value: {{ .Values.serviceInternalName }}
+            - name: KAFKA_BROKER
+              value: {{ .Values.kafkaBroker }}    
       podTemplate:
         metadata:
           annotations:
