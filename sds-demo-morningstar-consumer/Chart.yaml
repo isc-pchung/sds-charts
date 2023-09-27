@@ -6,6 +6,6 @@ apiVersion: v2
 appVersion: 1.2.5
 description: Use this service to securely store your solution's tables. This service collaborates with many other services as either a destination for data or a source of data. A Kafka Connector Service for instance, can only be deployed if attached to an IRIS database. On the other hand, a Live Aggregation Service needs an IRIS database as the source of the live data to aggregate.
 icon: https://isc-pchung.github.io/sds-charts/sds-demo-morningstar-consumer/icon.png
-name: isc-iris-db-morningstar
+name: sds-demo-morningstar-consumer
 type: application
 version: 1.2.5
