@@ -42,3 +42,6 @@ management:
 requiredSecrets:
   irisLicense: ""
   intersystemsContainerRegistrySecret: ""
+
+
+kafkaBroker: b-1.sds-fs-occ.o5d16i.c2.kafka.us-east-2.amazonaws.com:9092
