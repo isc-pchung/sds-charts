@@ -16,6 +16,23 @@ spec:
             pre.hook.backup.velero.io/command: '["/bin/bash", "/home/irisowner/sds-freeze.sh"]'
             post.hook.backup.velero.io/command: '["/bin/bash", "/home/irisowner/sds-thaw.sh"]'
         spec:
+          containers:
+            - name: morningstar-consumer
+              image: {{ .Values.image.consumer.registry }}/{{ .Values.image.consumer.repository }}:/{{ .Values.image.tag }}
+              imagePullPolicy: {{.Values.image.pullPolicy}}
+              resources:
+                requests:
+                  cpu: {{ .Values.compute.database.cpu }}
+                  memory: {{ .Values.compute.database.memory }}
+              env:
+                - name: CLOUD_PROVIDER
+                  value: {{ .Values.cloudProvider }}
+                - name: CLOUD_PROVIDER_REGION
+                  value: {{ .Values.cloudProviderRegion }}
+                - name: SERVICE_INTERNAL_NAME
+                  value: {{ .Values.serviceInternalName }}
+                - name: KAFKA_BROKER
+                  value: {{ .Values.kafkaBroker }}
           args:
             - --check-caps
             - "false"
