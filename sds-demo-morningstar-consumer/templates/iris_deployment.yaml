@@ -16,9 +16,9 @@ spec:
             pre.hook.backup.velero.io/command: '["/bin/bash", "/home/irisowner/sds-freeze.sh"]'
             post.hook.backup.velero.io/command: '["/bin/bash", "/home/irisowner/sds-thaw.sh"]'
         spec:
-          args:
-            - --check-caps
-            - "false"
+          # args:
+          #   - --check-caps
+          #   - "false"
           imagePullSecrets:
           {{- if .Values.requiredSecrets.intersystemsContainerRegistrySecret }}    
           - name: {{ .Values.requiredSecrets.intersystemsContainerRegistrySecret }}
