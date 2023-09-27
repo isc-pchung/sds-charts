@@ -1,28 +1,11 @@
-apiVersion: v2
-name: sds-demo-morningstar-consumer
-description: A Helm chart for Kubernetes
-
-# A chart can be either an 'application' or a 'library' chart.
-#
-# Application charts are a collection of templates that can be packaged into versioned archives
-# to be deployed.
-#
-# Library charts provide useful utilities or functions for the chart developer. They're included as
-# a dependency of application charts to inject those utilities and functions into the rendering
-# pipeline. Library charts do not define any templates and therefore cannot be deployed.
-type: application
-
-# This is the chart version. This version number should be incremented each time you make changes
-# to the chart and its templates, including the app version.
-# Versions are expected to follow Semantic Versioning (https://semver.org/)
-version: 0.2.0
-
-# This is the version number of the application being deployed. This version number should be
-# incremented each time you make changes to the application. Versions are not expected to
-# follow Semantic Versioning. They should reflect the version the application is using.
-# It is recommended to use it with quotes.
-appVersion: "0.2.0"
 annotations:
-  intersystems/sds-title: SDS Demo Morningstar Consumer
+  intersystems/sds-category: core,database
   intersystems/sds-organization: InterSystems Corporation
-  intersystems/sds-category: custom
+  intersystems/sds-title: InterSystems IRIS Database w/ Morningstar Consumer
+apiVersion: v2
+appVersion: 1.2.5
+description: Use this service to securely store your solution's tables. This service collaborates with many other services as either a destination for data or a source of data. A Kafka Connector Service for instance, can only be deployed if attached to an IRIS database. On the other hand, a Live Aggregation Service needs an IRIS database as the source of the live data to aggregate.
+icon: https://isc-pchung.github.io/sds-charts/sds-demo-morningstar-consumer/icon.png
+name: isc-iris-db
+type: application
+version: 1.2.5

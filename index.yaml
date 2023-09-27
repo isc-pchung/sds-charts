@@ -1,5 +1,25 @@
 apiVersion: v1
 entries:
+  isc-iris-db:
+  - annotations:
+      intersystems/sds-category: core,database
+      intersystems/sds-organization: InterSystems Corporation
+      intersystems/sds-title: InterSystems IRIS Database w/ Morningstar Consumer
+    apiVersion: v2
+    appVersion: 1.2.5
+    created: "2023-09-27T14:59:44.365967-04:00"
+    description: Use this service to securely store your solution's tables. This service
+      collaborates with many other services as either a destination for data or a
+      source of data. A Kafka Connector Service for instance, can only be deployed
+      if attached to an IRIS database. On the other hand, a Live Aggregation Service
+      needs an IRIS database as the source of the live data to aggregate.
+    digest: bca8d821363a98aba53eda5d0fba89a8ff4c6df101ca142c2b93237a3ec8c88f
+    icon: https://isc-pchung.github.io/sds-charts/sds-demo-morningstar-consumer/icon.png
+    name: isc-iris-db
+    type: application
+    urls:
+    - https://isc-pchung.github.io/sds-charts/isc-iris-db-1.2.5.tgz
+    version: 1.2.5
   sds-demo-morningstar:
   - annotations:
       intersystems/sds-category: custom
@@ -7,7 +27,7 @@ entries:
       intersystems/sds-title: SDS Demo Morningstar
     apiVersion: v2
     appVersion: 0.1.0
-    created: "2023-09-27T14:35:26.921462-04:00"
+    created: "2023-09-27T14:59:44.367699-04:00"
     description: A Helm chart for Kubernetes
     digest: 72c2c1599d966e38df7b44334ec8a701a53f2f5e44318fd625cae6f5d797f7b8
     name: sds-demo-morningstar
@@ -22,7 +42,7 @@ entries:
       intersystems/sds-title: SDS Demo Morningstar Consumer
     apiVersion: v2
     appVersion: 0.2.0
-    created: "2023-09-27T14:35:26.924164-04:00"
+    created: "2023-09-27T14:59:44.371135-04:00"
     description: A Helm chart for Kubernetes
     digest: ba2523331fecffa95d6ca602e6104e0ea15e778750be40c17008679ab12c6fbf
     name: sds-demo-morningstar-consumer
@@ -36,7 +56,7 @@ entries:
       intersystems/sds-title: SDS Demo Morningstar Consumer
     apiVersion: v2
     appVersion: 0.1.0
-    created: "2023-09-27T14:35:26.923278-04:00"
+    created: "2023-09-27T14:59:44.369541-04:00"
     description: A Helm chart for Kubernetes
     digest: 53b0573ffcba19610d55ba07d6909975d4d972a330b7110e14a9235c1bffac63
     name: sds-demo-morningstar-consumer
@@ -44,4 +64,4 @@ entries:
     urls:
     - https://isc-pchung.github.io/sds-charts/sds-demo-morningstar-consumer-0.1.0.tgz
     version: 0.1.0
-generated: "2023-09-27T14:35:26.919853-04:00"
+generated: "2023-09-27T14:59:44.363616-04:00"

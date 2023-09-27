@@ -17,16 +17,6 @@ secrets:
   reason: These are the credentials to authenticate with containers.intersystems.com
 EULSA: https://www.intersystems.com/EULSA-Docs/InterSystems_IRIS_Cloud_End_User-8_14_19.pdf 
 endpoints:
-- title: Swagger
-  group: Developer
-  description: Open the Swagger documentation page for API
-  type: browsing
-  url: http://{externalService.host}:{externalService.port}/swagger-ui.html
-  contexts: 
-  - manage
-  visibility: external
-  presentation: link
-  externalService: management
 - title: Web Terminal
   group: Developer
   description: Open an instance of terminal in your browser
@@ -290,60 +280,4 @@ externalServicesDeclarations:
    label: Management Portal over Load Balancer
    description: Port to access the management portal over a Load Balancer
 
-endpointDependencies:
-  - dependency: trade-datasource
-    endpointType: kafka
-    reason: This application needs to pull trades and price updates from kafka topics
-    chartField: kafkaBroker
-    optional: false
 
-
-# apiVersion: v1
-
-# secrets:
-# - field: requiredSecrets.intersystemsContainerRegistrySecret
-#   type: image-pull-secret
-#   subType: containers.intersystems.com
-#   reason: These are the credentials to authenticate with containers.intersystems.com
-
-# endpoints:
-# - title: Swagger
-#   group: Developer
-#   description: Open the Swagger documentation page for API
-#   type: browsing
-#   url: http://{externalService.host}:{externalService.port}/swagger-ui.html
-#   contexts: 
-#   - manage
-#   visibility: external
-#   presentation: link
-#   externalService: management
-
-# externalServicesDeclarations:
-#  - name: management
-#    type: loadBalancer
-#    hostnameChartField: management.hostname
-#    loadBalancerPortChartField: management.port
-#    enabled: false
-#    enabledChartField: management.enabled
-#    label: Management Portal over Load Balancer
-#    description: Port to access the management portal over a Load Balancer
-
-# compute:
-#   computeSpecs:
-#   - name: database
-#     label: Database Node Specification
-#     categoryFilter: CO,MO,GP
-#     minCPU: 2
-#     minRAM: 4
-#     nodeSelectorField: compute.database.nodeTypeSelector
-#     cpuRequestField: compute.database.cpu
-#     memoryRequestField: compute.database.memory
-#     help: Specifies how many cores and how much memory your database server nodes will have
-
-
-# endpointDependencies:
-#   - dependency: trade-datasource
-#     endpointType: kafka
-#     reason: This application needs to pull trades and price updates from kafka topics
-#     chartField: kafkaBroker
-#     optional: false

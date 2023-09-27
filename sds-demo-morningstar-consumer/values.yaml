@@ -1,8 +1,3 @@
-replicaCount: 1
-
-app:
-  namespace: "sds-services"
-
 # Used to specify where the deployment is being done
 cloudProvider: "dev"
 cloudProviderRegion: "dev"
@@ -28,9 +23,9 @@ storageJournal2:
   storageClass : ssd-storageclass-1
 
 mirrored: false
-# image:
-#   registry: containers.intersystems.com/iscinternal/sds
-#   repository: isc-iris-db
+image:
+  registry: containers.intersystems.com/iscinternal/sds
+  repository: isc-iris-db
 
 superServer:
   enabled: true
@@ -39,102 +34,11 @@ superServer:
 
 management:
   enabled: true
-  backend:
-    hostname: "localhost"
-    port: "10001"
-  consumer:
-    hostname: "localhost"
-    port: "8000"
+  hostname: "localhost"
+  port: "10001"
 
 # These are the secret fields needed to successfully deploy.
 # They will be injected by the control plane:
 requiredSecrets:
   irisLicense: ""
   intersystemsContainerRegistrySecret: ""
-
-image:
-  backend:
-    registry: containers.intersystems.com/iscinternal/sds
-    repository: isc-iris-db
-  consumer:
-    registry: containers.intersystems.com/iscinternal/sds-demo
-    repository: morningstar-consumer
-  pullPolicy: Always
-  # Overrides the image tag whose default is the chart appVersion.
-  tag: "0.1.0"
-
-imagePullSecrets: []
-nameOverride: ""
-fullnameOverride: ""
-
-podAnnotations: {}
-
-podSecurityContext: {}
-  # fsGroup: 2000
-
-securityContext: {}
-  # capabilities:
-  #   drop:
-  #   - ALL
-  # readOnlyRootFilesystem: true
-  # runAsNonRoot: true
-  # runAsUser: 1000
-
-service:
-  type: ClusterIP
-  port: 10050
-
-
-# These are the secret fields needed to successfully deploy.
-# They will be injected by the control plane:
-# requiredSecrets:
-#   intersystemsContainerRegistrySecret: ""
-
-kafkaBroker: b-1.sds-fs-occ.o5d16i.c2.kafka.us-east-2.amazonaws.com:9092
-
-ingress:
-  enabled: false
-  className: ""
-  annotations: {}
-    # kubernetes.io/ingress.class: nginx
-    # kubernetes.io/tls-acme: "true"
-  hosts:
-    - host: chart-example.local
-      paths:
-        - path: /
-          pathType: ImplementationSpecific
-  tls: []
-  #  - secretName: chart-example-tls
-  #    hosts:
-  #      - chart-example.local
-
-resources: {}
-  # We usually recommend not to specify default resources and to leave this as a conscious
-  # choice for the user. This also increases chances charts run on environments with little
-  # resources, such as Minikube. If you do want to specify resources, uncomment the following
-  # lines, adjust them as necessary, and remove the curly braces after 'resources:'.
-  # limits:
-  #   cpu: 100m
-  #   memory: 128Mi
-  # requests:
-  #   cpu: 100m
-  #   memory: 128Mi
-
-autoscaling:
-  enabled: false
-  minReplicas: 1
-  maxReplicas: 100
-  targetCPUUtilizationPercentage: 80
-  # targetMemoryUtilizationPercentage: 80
-
-nodeSelector: {}
-
-tolerations: []
-
-affinity: {}
-
-
-# management:
-#   enabled: true
-#   hostname: "localhost"
-#   port: "8000"
