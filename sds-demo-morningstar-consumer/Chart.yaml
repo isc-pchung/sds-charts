@@ -1,7 +1,7 @@
 annotations:
   intersystems/sds-category: core,database
   intersystems/sds-organization: InterSystems Corporation
-  intersystems/sds-title: InterSystems IRIS Database w/ Morningstar Consumer2
+  intersystems/sds-title: InterSystems IRIS Database w/ Morningstar Consumer3
 apiVersion: v2
 appVersion: 1.2.5
 description: Use this service to securely store your solution's tables. This service collaborates with many other services as either a destination for data or a source of data. A Kafka Connector Service for instance, can only be deployed if attached to an IRIS database. On the other hand, a Live Aggregation Service needs an IRIS database as the source of the live data to aggregate.
