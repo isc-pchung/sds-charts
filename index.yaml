@@ -4,20 +4,20 @@ entries:
   - annotations:
       intersystems/sds-category: core,database
       intersystems/sds-organization: InterSystems Corporation
-      intersystems/sds-title: InterSystems IRIS Database w/ Morningstar Consumer2
+      intersystems/sds-title: InterSystems IRIS Database w/ Morningstar Consumer7
     apiVersion: v2
     appVersion: 1.2.5
-    created: "2023-09-28T19:53:32.826452-04:00"
+    created: "2023-09-28T19:54:12.775201-04:00"
     description: Use this service to securely store your solution's tables. This service
       collaborates with many other services as either a destination for data or a
       source of data. A Kafka Connector Service for instance, can only be deployed
       if attached to an IRIS database. On the other hand, a Live Aggregation Service
       needs an IRIS database as the source of the live data to aggregate.
-    digest: e7ac62bb847ce2df10ab9009b77636f970e790e7d24af6afc9da4f680369bf99
+    digest: 06d41eaeb15028d6955164d5e0a6e377c0fcfa4a0bd019f7dda0ec8e74019b69
     icon: https://isc-pchung.github.io/sds-charts/sds-demo-morningstar-consumer/icon.png
     name: sds-demo-morningstar-consumer
     type: application
     urls:
     - https://isc-pchung.github.io/sds-charts/sds-demo-morningstar-consumer-1.2.5.tgz
     version: 1.2.5
-generated: "2023-09-28T19:53:32.825556-04:00"
+generated: "2023-09-28T19:54:12.77434-04:00"
