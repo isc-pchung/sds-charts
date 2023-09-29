@@ -33,7 +33,7 @@ image:
 #   # Overrides the image tag whose default is the chart appVersion.
 #   tag: "0.1.0"
 
-# kafkaBroker: b-1.sds-fs-occ.o5d16i.c2.kafka.us-east-2.amazonaws.com:9092
+kafkaBroker: b-1.sds-fs-occ.o5d16i.c2.kafka.us-east-2.amazonaws.com:9092
 
 superServer:
   enabled: true
@@ -44,6 +44,8 @@ management:
   enabled: true
   hostname: "localhost"
   port: "10001"
+  # consumer:
+  #   port:
 
 # These are the secret fields needed to successfully deploy.
 # They will be injected by the control plane:

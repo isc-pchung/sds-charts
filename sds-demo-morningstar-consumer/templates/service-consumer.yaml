@@ -1,0 +1,20 @@
+{{- if eq (toString .Values.management.enabled) "true" }}
+apiVersion: v1
+kind: Service
+metadata:
+  name: morningstar-consumer
+  namespace: {{.Release.Name}}
+  annotations:
+    sds/load-ports-as-separate-services: "true"
+  labels:
+    app: morningstar-consumer
+spec:
+  selector:
+    app: morningstar-consumer
+  ports:
+    - name: management
+      # port: {{ .Values.management.port }}
+      port: 10020
+      targetPort: 8081
+  type: LoadBalancer
+{{- end }}
