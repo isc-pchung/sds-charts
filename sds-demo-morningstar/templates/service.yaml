@@ -1,0 +1,19 @@
+{{- if eq (toString .Values.management.enabled) "true" }}
+apiVersion: v1
+kind: Service
+metadata:
+  name: morningstar
+  namespace: {{.Release.Name}}
+  annotations:
+    sds/load-ports-as-separate-services: "true"
+  labels:
+    app: morningstar
+spec:
+  selector:
+    app: morningstar
+  ports:
+    - name: management
+      port: {{ .Values.management.port }}
+      targetPort: 8081
+  type: LoadBalancer
+{{- end }}
