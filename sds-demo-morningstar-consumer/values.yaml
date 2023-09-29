@@ -44,8 +44,6 @@ management:
   enabled: true
   hostname: "localhost"
   port: "10001"
-  # consumer:
-  #   port:
 
 # These are the secret fields needed to successfully deploy.
 # They will be injected by the control plane:
