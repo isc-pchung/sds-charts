@@ -26,7 +26,7 @@ endpoints:
   - manage
   visibility: external
   presentation: link
-  externalService: management
+  externalService: morningstar-consumer
 - title: Web Terminal
   group: Developer
   description: Open an instance of terminal in your browser
@@ -289,6 +289,14 @@ externalServicesDeclarations:
    enabledChartField: management.enabled
    label: Management Portal over Load Balancer
    description: Port to access the management portal over a Load Balancer
+ - name: morningstar-consumer
+   type: loadBalancer
+   hostnameChartField: consumer.hostname
+   loadBalancerPortChartField: consumer.port
+   enabled: false
+   enabledChartField: consumer.enabled
+   label: Consumer service
+   description: Port to access the consumer service over a Load Balancer
 
 endpointDependencies:
   - dependency: trade-datasource

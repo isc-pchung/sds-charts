@@ -7,7 +7,7 @@ entries:
       intersystems/sds-title: SDS Demo Morningstar
     apiVersion: v2
     appVersion: 0.1.0
-    created: "2023-10-01T22:20:47.415649-04:00"
+    created: "2023-10-02T15:10:53.118522-04:00"
     description: A Helm chart for Kubernetes
     digest: 6db87e27d7f83c50c1fd41cb657918fb7565f8a72302d4b59a6a1e36d4f64db1
     name: sds-demo-morningstar
@@ -19,20 +19,20 @@ entries:
   - annotations:
       intersystems/sds-category: core,database
       intersystems/sds-organization: InterSystems Corporation
-      intersystems/sds-title: InterSystems IRIS Database w/ Morningstar Consumer7
+      intersystems/sds-title: InterSystems IRIS Database w/ Morningstar Consumer2
     apiVersion: v2
     appVersion: 1.2.5
-    created: "2023-10-01T22:20:47.416255-04:00"
+    created: "2023-10-02T15:10:53.119219-04:00"
     description: Use this service to securely store your solution's tables. This service
       collaborates with many other services as either a destination for data or a
       source of data. A Kafka Connector Service for instance, can only be deployed
       if attached to an IRIS database. On the other hand, a Live Aggregation Service
       needs an IRIS database as the source of the live data to aggregate.
-    digest: 001901d0cc18b3dcac8dda7117d45b15b48a70226c68974ae29687eb2f577c64
+    digest: b42ced426dcfb6a6e2e5959e8f478c19273aab1e143aa54a6f88791b96f8bde7
     icon: https://isc-pchung.github.io/sds-charts/sds-demo-morningstar-consumer/icon.png
     name: sds-demo-morningstar-consumer
     type: application
     urls:
     - https://isc-pchung.github.io/sds-charts/sds-demo-morningstar-consumer-1.2.5.tgz
     version: 1.2.5
-generated: "2023-10-01T22:20:47.414057-04:00"
+generated: "2023-10-02T15:10:53.117055-04:00"
