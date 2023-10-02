@@ -14,7 +14,7 @@ spec:
     intersystems.com/kind: IrisCluster
     intersystems.com/role: iris
   ports:
-    - name: management
+    - name: morningstar-consumer
       port: {{ .Values.consumer.port }}
       # port: 10020
       targetPort: 8081
