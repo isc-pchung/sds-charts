@@ -52,11 +52,11 @@ spec:
 
       containers:
       - name: morningstar-consumer
-        image: containers.intersystems.com/iscinternal/sds-demo/morningstar-consumer:0.1.0
+        image: containers.intersystems.com/iscinternal/sds-demo/morningstar:0.2.0
         # imagePullPolicy: Always
         # resources:
         #   requests:
-        #     cpu: 16{{ .Values.compute.database.cpu }}
+        #     cpu: {{ .Values.compute.database.cpu }}
         #     memory: {{ .Values.compute.database.memory }}
         env:
         - name: CLOUD_PROVIDER
