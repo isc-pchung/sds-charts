@@ -7,7 +7,7 @@ entries:
       intersystems/sds-title: SDS Demo Morningstar
     apiVersion: v2
     appVersion: 0.1.0
-    created: "2023-10-12T13:48:52.824307-04:00"
+    created: "2023-10-12T15:05:08.005734-04:00"
     description: A Helm chart for Kubernetes
     digest: 6db87e27d7f83c50c1fd41cb657918fb7565f8a72302d4b59a6a1e36d4f64db1
     name: sds-demo-morningstar
@@ -22,7 +22,7 @@ entries:
       intersystems/sds-title: InterSystems IRIS Database w/ Morningstar Consumer3
     apiVersion: v2
     appVersion: 1.2.9
-    created: "2023-10-12T13:48:52.824899-04:00"
+    created: "2023-10-12T15:05:08.00869-04:00"
     description: Use this service to securely store your solution's tables. This service
       collaborates with many other services as either a destination for data or a
       source of data. A Kafka Connector Service for instance, can only be deployed
@@ -35,4 +35,24 @@ entries:
     urls:
     - https://isc-pchung.github.io/sds-charts/sds-demo-morningstar-consumer-1.2.9.tgz
     version: 1.2.9
-generated: "2023-10-12T13:48:52.822827-04:00"
+  sds-demo-persister-iris:
+  - annotations:
+      intersystems/sds-category: core,database
+      intersystems/sds-organization: InterSystems Corporation
+      intersystems/sds-title: InterSystems IRIS Database w/ Persister
+    apiVersion: v2
+    appVersion: 1.2.9
+    created: "2023-10-12T15:05:08.009398-04:00"
+    description: Use this service to securely store your solution's tables. This service
+      collaborates with many other services as either a destination for data or a
+      source of data. A Kafka Connector Service for instance, can only be deployed
+      if attached to an IRIS database. On the other hand, a Live Aggregation Service
+      needs an IRIS database as the source of the live data to aggregate.
+    digest: 6476888e881739c3d15b672225405b9af91307de8904fce1e186a38e3afdd8b1
+    icon: https://isc-pchung.github.io/sds-charts/sds-demo-morningstar-consumer/icon.png
+    name: sds-demo-persister-iris
+    type: application
+    urls:
+    - https://isc-pchung.github.io/sds-charts/sds-demo-persister-iris-1.2.9.tgz
+    version: 1.2.9
+generated: "2023-10-12T15:05:08.004818-04:00"
