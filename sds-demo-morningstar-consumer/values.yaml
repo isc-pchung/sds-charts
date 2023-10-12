@@ -28,7 +28,7 @@ image:
   repository: isc-iris-db
 #   consumer:
 #     registry: containers.intersystems.com/iscinternal/sds-demo
-#     repository: morningstar-consumer
+#     repository: persister-iris
 #   pullPolicy: Always
 #   # Overrides the image tag whose default is the chart appVersion.
 #   tag: "0.1.0"

@@ -26,7 +26,7 @@ endpoints:
   - manage
   visibility: external
   presentation: link
-  externalService: morningstar-consumer
+  externalService: persister-iris
 - title: Web Terminal
   group: Developer
   description: Open an instance of terminal in your browser
@@ -289,7 +289,7 @@ externalServicesDeclarations:
    enabledChartField: management.enabled
    label: Management Portal over Load Balancer
    description: Port to access the management portal over a Load Balancer
- - name: morningstar-consumer
+ - name: persister-iris
    type: loadBalancer
    hostnameChartField: consumer.hostname
    loadBalancerPortChartField: consumer.port

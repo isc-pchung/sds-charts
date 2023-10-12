@@ -51,7 +51,7 @@ spec:
       {{- end }}
 
       containers:
-      - name: morningstar-consumer
+      - name: persister-iris
         image: containers.intersystems.com/iscinternal/sds-demo/morningstar:0.2.0
         # imagePullPolicy: Always
         # resources:
