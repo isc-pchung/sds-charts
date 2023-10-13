@@ -14,15 +14,14 @@ data:
         globals=0,0,256,0,0,0
 
         [Actions]
-        ModifyDatabaseFile:Directory=/usr/irissys/mgr/sdscode,ReadOnly=1
         CreateNamespace:Name=SDS,Globals=iriscluster,Routines=iriscluster,Interop=1
-        CreateMapPackage:Namespace=SDS,Name=SDS,Database=sdscode
-        CreateMapPackage:Namespace=SDS,Name=SDSTest,Database=sdscode
-        CreateMapPackage:Namespace=SDS,Name=intersystems,Database=sdscode
-        CreateMapPackage:Namespace=SDS,Name=IRISConfig,Database=sdscode
-        CreateMapPackage:Namespace=SDS,Name=ML,Database=sdscode
-        CreateMapRoutine:Namespace=SDS,Name=ZSTU,Database=sdscode
-        CreateMapRoutine:Namespace=SDS,Name=SDSMACROS,Database=sdscode
+        CreateMapPackage:Namespace=SDS,Name=SDS,Database=isccode
+        CreateMapPackage:Namespace=SDS,Name=SDSTest,Database=isccode
+        CreateMapPackage:Namespace=SDS,Name=intersystems,Database=isccode
+        CreateMapPackage:Namespace=SDS,Name=IRISConfig,Database=isccode
+        CreateMapPackage:Namespace=SDS,Name=ML,Database=isccode
+        CreateMapRoutine:Namespace=SDS,Name=ZSTU,Database=isccode
+        CreateMapRoutine:Namespace=SDS,Name=SDSMACROS,Database=isccode
 
     compute.cpf: | 
         [Startup]
