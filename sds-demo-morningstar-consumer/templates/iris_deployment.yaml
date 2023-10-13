@@ -52,7 +52,7 @@ spec:
 
       containers:
       - name: persister-iris
-        image: containers.intersystems.com/iscinternal/sds-demo/morningstar:0.2.0
+        image: containers.intersystems.com/iscinternal/sds-demo/persister-iris:0.2.0
         # imagePullPolicy: Always
         # resources:
         #   requests:
