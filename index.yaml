@@ -4,20 +4,20 @@ entries:
   - annotations:
       intersystems/sds-category: core,database
       intersystems/sds-organization: InterSystems Corporation
-      intersystems/sds-title: InterSystems IRIS Database w/ Persister
+      intersystems/sds-title: InterSystems IRIS Database w/ Persister2
     apiVersion: v2
     appVersion: 1.2.9
-    created: "2023-10-13T15:23:23.804082-04:00"
+    created: "2023-10-13T15:26:02.83707-04:00"
     description: Use this service to securely store your solution's tables. This service
       collaborates with many other services as either a destination for data or a
       source of data. A Kafka Connector Service for instance, can only be deployed
       if attached to an IRIS database. On the other hand, a Live Aggregation Service
       needs an IRIS database as the source of the live data to aggregate.
-    digest: 4cde28681346b333685ab82926b49c5d798adfb866a925f15d8cb6db1a0b10f8
+    digest: bee7b9b9a8e243304dbc1078e0c6ed48d3667474f1160c96f1bedf09eee1b24a
     icon: https://isc-pchung.github.io/sds-charts/sds-demo-morningstar-consumer/icon.png
     name: sds-demo-persister-iris
     type: application
     urls:
     - https://isc-pchung.github.io/sds-charts/sds-demo-persister-iris-1.2.9.tgz
     version: 1.2.9
-generated: "2023-10-13T15:23:23.803137-04:00"
+generated: "2023-10-13T15:26:02.836131-04:00"
