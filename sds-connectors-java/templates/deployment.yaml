@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: connectors-jvm
+  name: connectors-java
   namespace: {{.Release.Name}}
   labels:
-    app: connectors-jvm
+    app: connectors-java
     
     
 spec:
   replicas: {{.Values.replicaCount}}
   selector:
     matchLabels:
-      app: connectors-jvm
+      app: connectors-java
   template:
     metadata:
       labels:
-        app: connectors-jvm
+        app: connectors-java
     spec:
       # imagePullSecrets:
       #   - name: intersystems-container-registry-secret
@@ -24,8 +24,8 @@ spec:
           - name: {{ .Values.requiredSecrets.intersystemsContainerRegistrySecret }}
           {{- end }}
       containers:
-        - name: sds-connectors-jvm
-          # image: containers.intersystems.com/iscinternal/sds-service/sds-connectors-jvm:0.1.0
+        - name: sds-connectors-java
+          # image: containers.intersystems.com/iscinternal/sds-service/sds-connectors-java:0.1.0
           image: {{ .Values.image.registry }}/{{ .Values.image.repository }}:{{ .Chart.AppVersion }}
           imagePullPolicy: {{.Values.image.pullPolicy}}
           resources:
