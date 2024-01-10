@@ -7,9 +7,9 @@ entries:
       intersystems/sds-title: SDS Connectors Java
     apiVersion: v2
     appVersion: latest
-    created: "2024-01-10T12:42:46.849534-05:00"
+    created: "2024-01-10T12:53:17.268929-05:00"
     description: A Helm chart for Kubernetes
-    digest: cf2501facd52fdec4112fd999f25e8e8634b91fb46db1ef85becfef0649a916d
+    digest: 42cf38aedcd33e4da3723630d643deddec033b9d446cacd187d50423fb528720
     name: sds-connectors-java
     type: application
     urls:
@@ -22,7 +22,7 @@ entries:
       intersystems/sds-title: InterSystems IRIS Database w/ Persister3
     apiVersion: v2
     appVersion: 1.2.9
-    created: "2024-01-10T12:42:46.850617-05:00"
+    created: "2024-01-10T12:53:17.27026-05:00"
     description: Use this service to securely store your solution's tables. This service
       collaborates with many other services as either a destination for data or a
       source of data. A Kafka Connector Service for instance, can only be deployed
@@ -35,4 +35,4 @@ entries:
     urls:
     - https://isc-pchung.github.io/sds-charts/sds-demo-persister-iris-1.2.9.tgz
     version: 1.2.9
-generated: "2024-01-10T12:42:46.847543-05:00"
+generated: "2024-01-10T12:53:17.267305-05:00"
